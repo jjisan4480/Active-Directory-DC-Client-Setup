@@ -88,15 +88,15 @@ Before starting, ensure you have the following resources available in your Proxm
 ## Part 5: Creating Active Directory Users and Groups
 
 1. Open **Active Directory Users and Computers** (`dsa.msc`).
-2. Expand your domain (`jisan.local`). Right-click the **Users** container -> **New** -> **Group**. Name it `Shared Folder Access`.
-   > 📸 **Screenshot:** 
-   ![The New Object - Group dialog box.](./ss/6.png)
-3. Right-click the **Users** container -> **New** -> **User**. Create a standard user (e.g., `jjisan`) and set the password to never expire.
-4. Create an admin user (e.g., `jjadmin`).
-5. Right-click the admin user -> **Properties** -> **Member Of** tab -> **Add**. Type `Domain Admins` and apply.
+2. Expand your domain (`jisan.local`). Right-click the **Users** container -> **New** -> **Group**. Name it `Shared Folder Access`. 
+    > 📸 **Screenshot:**
+     ![The New Object - Group dialog box.](./ss/6.png)
+4. Right-click the **Users** container -> **New** -> **User**. Create a standard user (e.g., `jjisan`) and set the password to never expire.
+5. Create an admin user (e.g., `jjadmin`).
+6. Right-click the admin user -> **Properties** -> **Member Of** tab -> **Add**. Type `Domain Admins` and apply.
    > 📸 **Screenshot:** 
    ![The user's 'Member Of' properties tab showing Domain Admins.](./ss/8.png)
-6. Add both users to the `Shared Folder Access` group.
+7. Add both users to the `Shared Folder Access` group.
    > 📸 **Screenshot:** 
    ![Both User added](./ss/9.png)
 ---
