@@ -85,7 +85,38 @@ Before starting, ensure you have the following resources available in your Proxm
 
 ---
 
-## Part 5: Creating Active Directory Users and Groups
+## Part 5: Basic Active Directory Setup ( OUs, Groups and Users)
+1. Open **Active Directory Users and Computers** (ADUC) from the Windows Administrative Tools menu.
+2. **Create Organizational Units (OUs):** - Right-click your domain name (`jisan.local`) > **New** > **Organizational Unit**.
+   - Name it (e.g., `BD`, `NZ`, `CA`) and click **OK**.
+   - Best Practice: Create nested OUs within these geographical OUs to categorize assets (e.g., under `BD`, create new OUs named `Computers`, `Users`, and `Servers`).
+   > 📸 **Screenshot:** 
+   ![The 'Server Roles' selection screen with AD DS, DHCP, and DNS checked.](./ss/3.png)
+3. **Create Groups:**
+   - Right-click the `Users` OU you just created > **New** > **Group**.
+   - Name the group (e.g., `IT`, `HR`, `Finance`).
+   - Leave the Group scope as **Global** and Group type as **Security**.
+   - *Note on Group Types: Security groups are used to assign permissions and user rights. Distribution groups are used solely for email distribution lists.*
+4. **Create Users:**
+   - Right-click the `Users` OU > **New** > **User**.
+   - Enter the First Name, Last Name, and User logon name. Click **Next**.
+   - Enter a default password. For a home lab, you can check **Password never expires** to prevent lockouts, though this isn't best practice for a production environment. Click **Next** and **Finish**.
+5. **Assign Users to Groups:**
+   - Right-click the newly created user and select **Properties**.
+   - Go to the **Member Of** tab and click **Add**.
+   - Type the name of the group (e.g., `IT`), click **Check Names**, and click **OK**.
+  
+
+
+
+
+
+
+
+
+
+
+
 
 1. Open **Active Directory Users and Computers** (`dsa.msc`).
 2. Expand your domain (`jisan.local`). Right-click the **Users** container -> **New** -> **Group**. Name it `Shared Folder Access`.
